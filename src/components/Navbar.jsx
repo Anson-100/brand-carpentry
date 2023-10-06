@@ -39,26 +39,26 @@ const Navbar = () => {
           </div>
         ) : (
           <button
-            className="rounded-full bg-grayish p-2"
+            className="rounded-full bg-gold p-2"
             onClick={() => setIsMenuToggled(!isMenuToggled)}
           >
-            <img alt="menu-icon" src={menuIcon} />
+            {" "}
+            {isMenuToggled ? (
+              <img alt="close-icon" src={closeIcon} />
+            ) : (
+              <img alt="menu-icon" src={menuIcon} />
+            )}
           </button>
         )}
 
         {/* BURGER MENU */}
         {!isDesktop && (
           <div
-            className={`fixed right-0 bottom-0 h-full bg-grayish w-[300px] transform transition-transform duration-300 ${
+            className={`fixed right-0 top-[4.6rem] h-auto pb-[4rem] bg-white w-full transform transition-transform duration-[400ms] ${
               isMenuToggled ? "translate-x-0" : "translate-x-full"
             }`}
           >
-            <div className="flex justify-end p-12">
-              <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
-                <img alt="close-icon" src={closeIcon} />
-              </button>
-            </div>
-            <div className="flex flex-col font-heebo ml-[33%] text-2xl text-darker-blue gap-10">
+            <div className="flex flex-col font-heebo text-center text-[1.75rem] text-darker-blue gap-20 pt-8">
               <Link page="gallery" />
               <Link page="contact" />
               <Link page="about" />
