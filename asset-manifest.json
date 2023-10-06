@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.4f18ae44.css",
-    "main.js": "/static/js/main.c85540e8.js",
-    "static/media/bg-image.png": "/static/media/bg-image.329501c953babe31025d.png",
-    "static/media/deck 1.jpg": "/static/media/deck 1.c59bff99445f3ec48f6d.jpg",
-    "index.html": "/index.html",
-    "main.4f18ae44.css.map": "/static/css/main.4f18ae44.css.map",
-    "main.c85540e8.js.map": "/static/js/main.c85540e8.js.map"
+    "main.css": "/brand-carpentry/static/css/main.128e8657.css",
+    "main.js": "/brand-carpentry/static/js/main.f10b410a.js",
+    "static/media/bg-image.png": "/brand-carpentry/static/media/bg-image.329501c953babe31025d.png",
+    "static/media/deck 1.jpg": "/brand-carpentry/static/media/deck 1.c59bff99445f3ec48f6d.jpg",
+    "index.html": "/brand-carpentry/index.html",
+    "main.128e8657.css.map": "/brand-carpentry/static/css/main.128e8657.css.map",
+    "main.f10b410a.js.map": "/brand-carpentry/static/js/main.f10b410a.js.map"
   },
   "entrypoints": [
-    "static/css/main.4f18ae44.css",
-    "static/js/main.c85540e8.js"
+    "static/css/main.128e8657.css",
+    "static/js/main.f10b410a.js"
   ]
 }
