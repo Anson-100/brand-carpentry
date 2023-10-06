@@ -15,9 +15,11 @@ const Landing = () => {
             fortunate because you can trust us to get shit done fast and get
             shit done right. Contact Cotter Construction today!
           </p> */}
-          <p className="slogan text-[150px] font-heebo">WE GET SHIT DONE.</p>
+          <p className="text-center slogan text-[65px] lg:text-[150px]  font-heebo">
+            WE GET SHIT DONE.
+          </p>
         </div>
-        <button className="contact font-sarabun text-[2rem] text-gold bg-white rounded-lg px-2 hover:text-black transition-all duration-300">
+        <button className="contact font-sarabun text-[1.5rem] bg-opacity-20 hover:bg-opacity-30 text-grayish bg-white rounded-lg px-2 transition-all duration-300">
           contact us
         </button>
       </div>
