@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/brand-carpentry/static/css/main.128e8657.css",
-    "main.js": "/brand-carpentry/static/js/main.f10b410a.js",
-    "static/media/bg-image.png": "/brand-carpentry/static/media/bg-image.329501c953babe31025d.png",
+    "main.css": "/brand-carpentry/static/css/main.97c5dcc5.css",
+    "main.js": "/brand-carpentry/static/js/main.fd8c1bbf.js",
+    "static/media/bg-image.png": "/brand-carpentry/static/media/bg-image.cd22dd9f67e28d9fb5b4.png",
     "static/media/deck 1.jpg": "/brand-carpentry/static/media/deck 1.c59bff99445f3ec48f6d.jpg",
     "index.html": "/brand-carpentry/index.html",
-    "main.128e8657.css.map": "/brand-carpentry/static/css/main.128e8657.css.map",
-    "main.f10b410a.js.map": "/brand-carpentry/static/js/main.f10b410a.js.map"
+    "static/media/close-icon.svg": "/brand-carpentry/static/media/close-icon.36a1df96f812b5f4c12f817f90a904c6.svg",
+    "static/media/menu-icon.svg": "/brand-carpentry/static/media/menu-icon.9cbfc3090b4b0aec575128df8ede3633.svg",
+    "main.97c5dcc5.css.map": "/brand-carpentry/static/css/main.97c5dcc5.css.map",
+    "main.fd8c1bbf.js.map": "/brand-carpentry/static/js/main.fd8c1bbf.js.map"
   },
   "entrypoints": [
-    "static/css/main.128e8657.css",
-    "static/js/main.f10b410a.js"
+    "static/css/main.97c5dcc5.css",
+    "static/js/main.fd8c1bbf.js"
   ]
 }
