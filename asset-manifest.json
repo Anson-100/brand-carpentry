@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4f18ae44.css",
+    "main.js": "/static/js/main.c85540e8.js",
+    "static/media/bg-image.png": "/static/media/bg-image.329501c953babe31025d.png",
+    "static/media/deck 1.jpg": "/static/media/deck 1.c59bff99445f3ec48f6d.jpg",
+    "index.html": "/index.html",
+    "main.4f18ae44.css.map": "/static/css/main.4f18ae44.css.map",
+    "main.c85540e8.js.map": "/static/js/main.c85540e8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4f18ae44.css",
+    "static/js/main.c85540e8.js"
+  ]
+}
