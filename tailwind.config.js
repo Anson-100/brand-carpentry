@@ -13,12 +13,17 @@ module.exports = {
         grayish: "#F4F4F4",
         cream: "#FCF9ED",
         gold: "#C58940",
+        "burnt-orange": "#CD5C08",
       },
       fontFamily: {
         sarabun: ["Sarabun", "sans-serif"],
         noto: ["Noto Sans", "sans-serif"],
         "great-vibes": ["Great Vibes", "cursive"],
         heebo: ["Heebo", "sans-serif"],
+      },
+
+      content: {
+        landing: "url('./assets/bg-image.png')",
       },
     },
     screens: {

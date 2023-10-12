@@ -26,7 +26,7 @@ body,
   background-image: url("assets/bg-image.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  /* background-position: center; */
   filter: saturate(140%);
 }
 

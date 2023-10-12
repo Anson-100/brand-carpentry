@@ -19,12 +19,17 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
   )
 }
 
-const Navbar = () => {
+const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
+  console.log("Is Top Of Page:", isTopOfPage)
   const [isMenuToggled, setIsMenuToggled] = useState(false)
   const isDesktop = useMediaQuery("(min-width: 768px)")
+  const navbarBackground = isTopOfPage ? "" : ""
 
   return (
-    <nav id="NAVBAR" className="z-40 fixed top-0 w-full bg-white">
+    <nav
+      id="NAVBAR"
+      className={`${navbarBackground} z-40 fixed top-0 w-full bg-white transition-all duration-300`}
+    >
       <div className="flex items-center justify-between mx-auto w-5/6 py-4">
         <h4 className="text-gold font-semibold font-heebo text-[1.75rem] lg:text-[2.5rem]">
           Cotter Carpentry

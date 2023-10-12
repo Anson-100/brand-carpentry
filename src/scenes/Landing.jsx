@@ -1,9 +1,13 @@
-import bgDeck from "../assets/deck 1.jpg"
+import useMediaQuery from "../hooks/useMediaQuery"
 
-const Landing = () => {
+const Landing = ({ isTopOfPage }) => {
+  const landingBorder = isTopOfPage ? "" : "border-opacity-0"
+
   return (
-    <section id="LANDING" className="h-full pt-[74px] lg:pt-[92px] flex">
-      <div className="h-[90%] m-auto flex justify-center flex-col items-center w-[95%] border-[1px] border-white rounded-lg p-3">
+    <section id="home" className="h-full pt-[74px] lg:pt-[92px] flex">
+      <div
+        className={`${landingBorder} h-[95%] w-[95%] m-auto flex justify-center flex-col items-center  border-[1px] border-white rounded-lg p-3 transition-all duration-300`}
+      >
         <div>
           {" "}
           {/* <p className="text-lg font-heebo">
