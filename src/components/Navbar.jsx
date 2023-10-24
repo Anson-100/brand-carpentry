@@ -3,6 +3,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll"
 import useMediaQuery from "../hooks/useMediaQuery"
 import menuIcon from "../assets/menu-icon.svg"
 import closeIcon from "../assets/close-icon.svg"
+import logo from "../assets/ccLogo.png"
 
 const Link = ({ page, selectedPage, setSelectedPage }) => {
   const lowerCasePage = page.toLowerCase()
@@ -31,9 +32,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
       className={`${navbarBackground} z-40 fixed top-0 w-full bg-white transition-all duration-300`}
     >
       <div className="flex items-center justify-between mx-auto w-5/6 py-4">
-        <h4 className="text-gold font-semibold font-heebo text-[1.75rem] lg:text-[2.5rem]">
-          Cotter Carpentry
-        </h4>
+        <img src={logo} alt="CC Logo" className="lg:h-[65px] h-[45px]" />
         {/* DESKTOP NAVBAR */}
         {isDesktop ? (
           <div className="font-heebo text-[1.5rem] text-darker-blue flex gap-4">

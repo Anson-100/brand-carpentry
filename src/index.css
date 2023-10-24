@@ -27,9 +27,119 @@ body,
   background-size: cover;
   background-repeat: no-repeat;
   /* background-position: center; */
-  filter: saturate(140%);
+}
+
+@media (max-width: 768px) {
+  #LANDING {
+    background-size: 300%; /* Increase to zoom in */
+    background-position: center center;
+  }
 }
 
 .slogan {
   text-shadow: 1px 1px 1px black;
+}
+
+/* TILE ANIMATION STYLING (desktop)*/
+.skills {
+  box-shadow: 2px 2px 4px gray;
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  height: 250px;
+  transition: all;
+  transition-duration: 200ms;
+  overflow: hidden;
+  position: relative;
+  background-color: white;
+}
+
+.skills:hover {
+  box-shadow: 1px 1px 3px gray;
+  transform: translateY(-2px);
+}
+
+.tile-icon {
+  transition: all;
+  transition-duration: 300ms;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tile-icon {
+  transform: translateY(140%);
+  width: 3rem;
+}
+
+.skills:hover .tile-icon {
+  width: 0px;
+}
+
+.tile-name {
+  transition: all;
+  transition-duration: 300ms;
+  transform: translateY(180%);
+}
+
+.skills:hover .tile-name {
+  transform: translateY(-50%);
+}
+
+.tile-info {
+  transition: all;
+  transition-duration: 300ms;
+  transform: translateY(150%);
+  font-size: 1.3rem;
+  opacity: 0;
+  height: 60%;
+}
+
+.skills:hover .tile-info {
+  transform: translateY(0%);
+  opacity: 100;
+  width: 90%;
+}
+
+/* TILE ANIMATION STYLING (mobile)*/
+
+.skills-mobile {
+  box-shadow: 2px 2px 4px gray;
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: white;
+  height: 150px;
+  transition: transform;
+  transition-duration: 300ms;
+}
+
+.skills-mobile.active {
+  transform: scale(150%);
+}
+
+.tile-icon-mobile {
+  color: black;
+  width: 2rem;
+  transition: all;
+  transition-duration: 300ms;
+}
+
+.skills-mobile.active .tile-icon-mobile {
+  width: 0;
+}
+
+.tile-name-mobile {
+  color: black;
+  transition: all;
+  transition-duration: 300ms;
+}
+
+.skills-mobile.active .tile-name-mobile {
+  transform: translateY(-200%);
 }

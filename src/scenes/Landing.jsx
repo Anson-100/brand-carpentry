@@ -1,6 +1,9 @@
 import useMediaQuery from "../hooks/useMediaQuery"
+import useScrollPosition from "../hooks/useScrollPosition"
 
 const Landing = ({ isTopOfPage }) => {
+  const [fadeClass1, fadeClass2] = useScrollPosition([200, 100], false)
+
   const landingBorder = isTopOfPage ? "" : "border-opacity-0"
 
   return (
@@ -10,21 +13,16 @@ const Landing = ({ isTopOfPage }) => {
       >
         <div>
           {" "}
-          {/* <p className="text-lg font-heebo">
-            Welcome to Cotter Construction. We service the Bradenton/Sarasota
-            area of central Florida but are willing to travel a little further
-            if the money is right. There is no shortage of people who do crappy
-            work around here and trying to find someone you can trust is a
-            hassle. If you are reading this consider yourself extremely
-            fortunate because you can trust us to get shit done fast and get
-            shit done right. Contact Cotter Construction today!
-          </p> */}
-          <p className="text-center slogan text-[90px] lg:text-[120px] font-heebo font-bold">
+          <p
+            className={`${fadeClass1} transition duration-300 text-center slogan text-[90px] lg:text-[120px] font-heebo font-bold`}
+          >
             WE GET SHIT DONE.
           </p>
         </div>{" "}
         <div>
-          <button className="contact font-sarabun text-[1.5rem] bg-opacity-20 hover:bg-opacity-30 text-grayish bg-white rounded-lg px-2 transition-all duration-300">
+          <button
+            className={`${fadeClass2} contact font-sarabun text-[1.5rem] bg-opacity-20 hover:bg-opacity-30 text-grayish bg-white rounded-lg px-2 transition-all duration-300`}
+          >
             contact us
           </button>
         </div>
