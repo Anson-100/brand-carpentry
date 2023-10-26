@@ -12,14 +12,14 @@ body,
 #root,
 .app {
   height: 100%;
-  /* background-color: white; */
+  background-color: #f4f4f4;
   @apply text-white;
 }
 
 /* NAVBAR---------------------------------------------------- */
-/* #NAVBAR {
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-} */
+#NAVBAR {
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+}
 
 /* LANDING--------------------------------------------------- */
 #LANDING {
@@ -40,7 +40,23 @@ body,
   text-shadow: 1px 1px 1px black;
 }
 
+.icon {
+  box-shadow: 2px 2px 4px gray;
+}
+
+.contact {
+  box-shadow: 2px 2px 4px gray;
+}
+
+.contact:active {
+  box-shadow: 1px 1px 2px gray;
+}
+
 /* TILE ANIMATION STYLING (desktop)*/
+/* .skillbox {
+  box-shadow: 2px 2px 4px gray;
+} */
+
 .skills {
   box-shadow: 2px 2px 4px gray;
   padding: 2px;
@@ -67,9 +83,6 @@ body,
   transition-duration: 300ms;
   margin-left: auto;
   margin-right: auto;
-}
-
-.tile-icon {
   transform: translateY(140%);
   width: 3rem;
 }
@@ -95,12 +108,12 @@ body,
   font-size: 1.3rem;
   opacity: 0;
   height: 60%;
+  width: 90%;
 }
 
 .skills:hover .tile-info {
   transform: translateY(0%);
   opacity: 100;
-  width: 90%;
 }
 
 /* TILE ANIMATION STYLING (mobile)*/
@@ -114,13 +127,14 @@ body,
   justify-content: center;
   border-radius: 5px;
   background-color: white;
-  height: 150px;
+  height: 88px;
   transition: transform;
   transition-duration: 300ms;
+  overflow: hidden;
 }
 
 .skills-mobile.active {
-  transform: scale(150%);
+  transform: scale(160%);
 }
 
 .tile-icon-mobile {
@@ -128,6 +142,7 @@ body,
   width: 2rem;
   transition: all;
   transition-duration: 300ms;
+  transform: translateY(40%);
 }
 
 .skills-mobile.active .tile-icon-mobile {
@@ -138,8 +153,36 @@ body,
   color: black;
   transition: all;
   transition-duration: 300ms;
+  font-size: 1.2rem;
+  font-family: "Heebo";
+  transform: translateY(50%);
 }
 
 .skills-mobile.active .tile-name-mobile {
-  transform: translateY(-200%);
+  transform: translateY(-30%);
 }
+
+.tile-info-mobile {
+  color: black;
+  transition: all;
+  transition-duration: 300ms;
+  font-size: 0.85rem;
+  font-family: "Heebo";
+  transform: translateY(150%);
+  opacity: 0;
+  height: 40%;
+  width: 90%;
+  text-align: center;
+}
+
+.skills-mobile.active .tile-info-mobile {
+  transform: translateY(-22%);
+  opacity: 1;
+  height: 60%;
+}
+
+/* NAVLINK STYLING */
+/* .navlink {
+  background-color: white;
+  display: inline-block;
+} */

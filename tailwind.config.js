@@ -8,13 +8,16 @@ module.exports = {
       colors: {
         "darker-blue": "#141E46",
         "dark-blue": "#0C356A",
-        "light-blue": "#89CFFD",
+        "light-blue": "#00A9FF",
         yellow: "#FBDF07",
+        cyberspace: "#272829",
         grayish: "#F4F4F4",
-        gray: "#7D7C7C",
+        grayer: "#7D7C7C",
         cream: "#FCF9ED",
         gold: "#C58940",
         "burnt-orange": "#CD5C08",
+        sand: "#EADBC8",
+        "phone-green": "#03C988",
       },
       fontFamily: {
         sarabun: ["Sarabun", "sans-serif"],

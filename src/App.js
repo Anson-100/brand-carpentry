@@ -6,6 +6,7 @@ import Services from "./scenes/Services"
 import About from "./scenes/About"
 import Gallery from "./scenes/Gallery"
 import Contact from "./scenes/Contact"
+import LineGradient from "./components/LineGradient"
 import Footer from "./scenes/Footer"
 import useMediaQuery from "./hooks/useMediaQuery"
 import useScrollPosition from "./hooks/useScrollPosition"
@@ -15,7 +16,6 @@ function App() {
   const [isTopOfPage, setIsTopOfPage] = useState(true)
   const isDesktop = useMediaQuery("(min-width: 1060px)")
 
-  console.log("App re-rendering")
   // USEEFFECT HOOK FOR TOP OF PAGE
   useEffect(() => {
     const handleScroll = () => {
@@ -48,7 +48,7 @@ function App() {
   const [fadeClass] = useScrollPosition(fadePoints, true)
 
   return (
-    <div className="app bg-white">
+    <div className="app">
       <Navbar
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
@@ -56,30 +56,67 @@ function App() {
       />
       <div
         id="LANDING"
-        className="h-full"
+        className="md:h-full"
         style={{
           backgroundPosition: `center ${-parallaxShift}px`,
           filter: "saturate(140%)",
         }}
       >
         {" "}
-        <Landing isTopOfPage={isTopOfPage} setSelectedPage={setSelectedPage} />
+        <motion.div
+          margin="0 0 -200px 0"
+          amount="all"
+          onViewportEnter={() => setSelectedPage("home")}
+        >
+          {" "}
+          <Landing
+            isTopOfPage={isTopOfPage}
+            setSelectedPage={setSelectedPage}
+          />
+        </motion.div>
       </div>
-
+      <LineGradient />
       <div className="h-full w-5/6 mx-auto">
-        <Services />
+        <motion.div
+          margin="0 0 -200px 0"
+          amount="all"
+          onViewportEnter={() => setSelectedPage("services")}
+        >
+          <Services />
+        </motion.div>
       </div>
+      <LineGradient />
+
       <div className="h-full">
-        <Gallery />
+        <motion.div
+          margin="0 0 -200px 0"
+          amount="all"
+          onViewportEnter={() => setSelectedPage("gallery")}
+        >
+          <Gallery />
+        </motion.div>
       </div>
+      <LineGradient />
+
+      <div className="h-full bg-grayish">
+        <motion.div
+          margin="0 0 -200px 0"
+          amount="all"
+          onViewportEnter={() => setSelectedPage("about")}
+        >
+          <About setSelectedPage={setSelectedPage} />
+        </motion.div>
+      </div>
+      <LineGradient />
+
       <div className="h-full">
-        <About />
-      </div>
-      <div className="h-full">
-        <Contact />
-      </div>
-      <div className="">
-        <Footer />
+        <motion.div
+          margin="0 0 -200px 0"
+          amount="all"
+          onViewportEnter={() => setSelectedPage("contact")}
+        >
+          <Contact />
+        </motion.div>
       </div>
     </div>
   )

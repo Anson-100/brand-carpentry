@@ -5,36 +5,62 @@ import {
   Square3Stack3DIcon,
   SparklesIcon,
   PuzzlePieceIcon,
-  ViewfinderCircleIcon,
-  HomeIcon,
   VariableIcon,
 } from "@heroicons/react/24/outline"
+import { motion } from "framer-motion"
 
 const Services = () => {
   const isDesktop = useMediaQuery("(min-width: 768px)")
 
-  const [tileTouch, setTileTouch] = useState(false)
+  const [tileStates, setTileStates] = useState({})
 
-  const handleTouch = () => {
-    if (tileTouch) {
-      setTileTouch(false)
-    } else {
-      setTileTouch(true)
-      setTimeout(() => setTileTouch(false), 5000)
+  const handleTouch = tileId => {
+    const anyTileActive = Object.values(tileStates).some(
+      state => state === true
+    )
+
+    if (!anyTileActive || tileStates[tileId]) {
+      setTileStates({
+        ...tileStates,
+        [tileId]: !tileStates[tileId],
+      })
+
+      if (!tileStates[tileId]) {
+        setTimeout(() => {
+          setTileStates(prevStates => ({
+            ...prevStates,
+            [tileId]: false,
+          }))
+        }, 5000)
+      }
     }
   }
 
   return (
-    <section id="services">
-      <div>
+    <section id="services" className="pt-16 md:pt-24">
+      <div className="border-2 border-gold rounded-xl p-3 bg-white mt-8 flex flex-col">
         <div>
           {" "}
-          <p className="text-darker-blue text-center my-5 text-[3rem] font-bold">
-            Services
-          </p>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, x: -50 },
+              visible: { opacity: 1, x: 0 },
+            }}
+          >
+            <p className="text-darker-blue text-center mb-3 text-[3rem] font-bold">
+              Services
+            </p>
+            <p className="text-black text-center mb-3 font-heebo text-[1.2rem]">
+              Check out some of the cool stuff we do!
+            </p>
+          </motion.div>
         </div>
         {isDesktop ? (
-          <div className="grid grid-cols-4 grid-rows-2 gap-4 font-heebo text-[1.5rem] text-black text-center bg-grayish p-4 rounded-lg">
+          <div className="skillbox grid grid-cols-4 grid-rows-2 gap-4 font-heebo text-[1.5rem] text-black text-center p-4 rounded-lg">
             <div className="skills">
               {" "}
               <Square3Stack3DIcon className="tile-icon" />
@@ -52,7 +78,7 @@ const Services = () => {
             </div>
             <div className="skills">
               <SparklesIcon className="tile-icon" />
-              <p className="tile-name">Bathroom Remodels</p>
+              <p className="tile-name">Remodels</p>
               <p className="tile-info">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi
                 illum doloremque tempore laborum soluta.
@@ -100,23 +126,97 @@ const Services = () => {
             </div>
           </div>
         ) : (
-          <div className="grid grid-cols-2 grid-rows-4 gap-4 bg-grayish p-4 rounded-lg">
+          // MOBILE TILE SECTION
+          <div className="skillbox grid grid-cols-2 grid-rows-4 gap-4 p-4 rounded-lg">
             <div
-              className={`skills-mobile ${tileTouch ? "active" : ""}`}
-              onClick={handleTouch}
+              onClick={() => handleTouch("tile1")}
+              className={`skills-mobile ${tileStates["tile1"] ? "active" : ""}`}
             >
               {" "}
               <Square3Stack3DIcon className="tile-icon-mobile" />
               <p className="tile-name-mobile">Flooring</p>{" "}
-              <p className="tile-info-mobile">Tile</p>
+              <p className="tile-info-mobile">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
             </div>
-            <div className="skills-mobile">1,2</div>
-            <div className="skills-mobile">1,3</div>
-            <div className="skills-mobile">1,4</div>
-            <div className="skills-mobile">2,1</div>
-            <div className="skills-mobile">2,2</div>
-            <div className="skills-mobile">2,3</div>
-            <div className="skills-mobile">2,4</div>
+
+            <div
+              onClick={() => handleTouch("tile2")}
+              className={`skills-mobile ${tileStates["tile2"] ? "active" : ""}`}
+            >
+              {" "}
+              <ViewColumnsIcon className="tile-icon-mobile" />
+              <p className="tile-name-mobile">Cabinets</p>{" "}
+              <p className="tile-info-mobile">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+            <div
+              onClick={() => handleTouch("tile3")}
+              className={`skills-mobile ${tileStates["tile3"] ? "active" : ""}`}
+            >
+              {" "}
+              <SparklesIcon className="tile-icon-mobile" />
+              <p className="tile-name-mobile">Remodels</p>{" "}
+              <p className="tile-info-mobile">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+            <div
+              onClick={() => handleTouch("tile4")}
+              className={`skills-mobile ${tileStates["tile4"] ? "active" : ""}`}
+            >
+              {" "}
+              <PuzzlePieceIcon className="tile-icon-mobile" />
+              <p className="tile-name-mobile">Drywall Repair</p>{" "}
+              <p className="tile-info-mobile">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+            <div
+              onClick={() => handleTouch("tile5")}
+              className={`skills-mobile ${tileStates["tile5"] ? "active" : ""}`}
+            >
+              {" "}
+              <VariableIcon className="tile-icon-mobile" />
+              <p className="tile-name-mobile">Trim</p>{" "}
+              <p className="tile-info-mobile">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+            <div
+              onClick={() => handleTouch("tile6")}
+              className={`skills-mobile ${tileStates["tile6"] ? "active" : ""}`}
+            >
+              {" "}
+              <VariableIcon className="tile-icon-mobile" />
+              <p className="tile-name-mobile">Doors</p>{" "}
+              <p className="tile-info-mobile">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+            <div
+              onClick={() => handleTouch("tile7")}
+              className={`skills-mobile ${tileStates["tile7"] ? "active" : ""}`}
+            >
+              {" "}
+              <VariableIcon className="tile-icon-mobile" />
+              <p className="tile-name-mobile">Decks</p>{" "}
+              <p className="tile-info-mobile">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+            <div
+              onClick={() => handleTouch("tile8")}
+              className={`skills-mobile ${tileStates["tile8"] ? "active" : ""}`}
+            >
+              {" "}
+              <VariableIcon className="tile-icon-mobile" />
+              <p className="tile-name-mobile">Siding</p>{" "}
+              <p className="tile-info-mobile">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
           </div>
         )}
       </div>
