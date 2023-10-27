@@ -37,6 +37,7 @@ module.exports = {
       md: "1060px",
       lg: "1200px",
       xl: "1700px",
+      se: { raw: "(min-width: 376px) and (min-height: 700px)" },
     },
   },
   plugins: [],

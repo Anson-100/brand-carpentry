@@ -44,7 +44,8 @@ body,
   box-shadow: 2px 2px 4px gray;
 }
 
-.contact {
+.contact,
+.contact-info {
   box-shadow: 2px 2px 4px gray;
 }
 
@@ -59,61 +60,32 @@ body,
 
 .skills {
   box-shadow: 2px 2px 4px gray;
-  padding: 2px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   border-radius: 5px;
-  height: 250px;
   transition: all;
   transition-duration: 200ms;
   overflow: hidden;
-  position: relative;
   background-color: white;
 }
 
 .skills:hover {
-  box-shadow: 1px 1px 3px gray;
-  transform: translateY(-2px);
 }
 
 .tile-icon {
-  transition: all;
-  transition-duration: 300ms;
-  margin-left: auto;
-  margin-right: auto;
-  transform: translateY(140%);
-  width: 3rem;
 }
 
 .skills:hover .tile-icon {
-  width: 0px;
 }
 
 .tile-name {
-  transition: all;
-  transition-duration: 300ms;
-  transform: translateY(180%);
 }
 
 .skills:hover .tile-name {
-  transform: translateY(-50%);
 }
 
 .tile-info {
-  transition: all;
-  transition-duration: 300ms;
-  transform: translateY(150%);
-  font-size: 1.3rem;
-  opacity: 0;
-  height: 60%;
-  width: 90%;
 }
 
 .skills:hover .tile-info {
-  transform: translateY(0%);
-  opacity: 100;
 }
 
 /* TILE ANIMATION STYLING (mobile)*/

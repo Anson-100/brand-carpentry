@@ -31,7 +31,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
       className={`${navbarBackground} z-40 fixed top-0 w-full transition-all duration-300`}
     >
       <div className="flex items-center justify-between mx-auto w-5/6 py-4">
-        <img src={logo} alt="CC Logo" className="lg:h-[65px] h-[45px]" />
+        <img src={logo} alt="CC Logo" className="md:h-[65px] h-[48px]" />
         {/* DESKTOP NAVBAR */}
         {isDesktop ? (
           <div className="font-heebo text-[1.5rem] text-darker-blue flex gap-4">
@@ -65,7 +65,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
           <button
             className={`${
               isTopOfPage ? "bg-light-blue" : "bg-light-blue"
-            } rounded-full p-2`}
+            } rounded-full p-2 z-50`}
             onClick={() => setIsMenuToggled(!isMenuToggled)}
           >
             {" "}
@@ -81,11 +81,11 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
         {!isDesktop && (
           <div
             id="nav-menu"
-            className={`fixed right-0 top-[4.8rem] h-auto pb-[4rem] bg-black bg-opacity-90 rounded-l-xl w-5/6 transform transition-transform duration-[400ms] ${
+            className={`fixed right-0 top-[5rem] h-auto pb-[4rem] bg-black bg-opacity-90 rounded-bl-xl w-2/3 transform transition-transform duration-[400ms] ${
               isMenuToggled ? "translate-x-0" : "translate-x-full"
             }`}
           >
-            <div className="flex flex-col font-heebo text-center text-[1.75rem] text-white gap-20 pt-8">
+            <div className="flex flex-col font-heebo text-center text-[1.75rem] text-white gap-20 pt-16">
               <Link
                 className="navlink"
                 page="Home"

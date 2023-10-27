@@ -8,16 +8,16 @@ const Landing = ({ isTopOfPage, setSelectedPage }) => {
   const landingBorder = isTopOfPage ? "" : "border-opacity-0"
 
   return (
-    <section id="home">
-      <div className="h-[100vh] flex flex-col">
+    <section id="home" className="h-screen">
+      <div className="h-full flex flex-col">
         <div className="h-[77px] md:h-[97px]"></div>
         <div
-          className={`${landingBorder} flex-grow mx-5 my-5 flex justify-center flex-col items-center border-[1px] border-white rounded-lg p-3 transition-all duration-300`}
+          className={`${landingBorder} flex-grow m-5 flex justify-center flex-col items-center border-[1px] border-white rounded-lg p-3 transition-all duration-300`}
         >
           <div>
             {" "}
             <p
-              className={`${fadeClass1} transition duration-300 text-center slogan text-[90px] lg:text-[120px] font-heebo font-bold`}
+              className={`${fadeClass1} transition duration-300 text-center slogan text-[80px] sm:text-[120px] font-heebo font-bold`}
             >
               WE GET SHIT DONE.
             </p>
