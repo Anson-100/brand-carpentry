@@ -1,17 +1,34 @@
 {
   "files": {
-    "main.css": "/brand-carpentry/static/css/main.97c5dcc5.css",
-    "main.js": "/brand-carpentry/static/js/main.fd8c1bbf.js",
-    "static/media/bg-image.png": "/brand-carpentry/static/media/bg-image.cd22dd9f67e28d9fb5b4.png",
-    "static/media/deck 1.jpg": "/brand-carpentry/static/media/deck 1.c59bff99445f3ec48f6d.jpg",
+    "main.css": "/brand-carpentry/static/css/main.b947bc09.css",
+    "main.js": "/brand-carpentry/static/js/main.8833ec22.js",
+    "static/media/bg-image.png": "/brand-carpentry/static/media/bg-image.93fd46fd411eebcf1b79.png",
+    "static/media/bathroom2-before-mobile.jpg": "/brand-carpentry/static/media/bathroom2-before-mobile.b80541824f9650622235.jpg",
+    "static/media/bathroom2-after-mobile.jpg": "/brand-carpentry/static/media/bathroom2-after-mobile.a7bd66e5f6436f92c4b9.jpg",
+    "static/media/after-ramp-mobile.jpg": "/brand-carpentry/static/media/after-ramp-mobile.bfe4f7eeb89d493e20ca.jpg",
+    "static/media/overhead mobile.jpg": "/brand-carpentry/static/media/overhead mobile.8b712f2524fb39360e34.jpg",
+    "static/media/before-ramp-mobile.jpg": "/brand-carpentry/static/media/before-ramp-mobile.23d400769c26d8750da4.jpg",
+    "static/media/overhead 1.jpg": "/brand-carpentry/static/media/overhead 1.4d1fb3fbc18fd64ca922.jpg",
+    "static/media/pergola-before-mobile.jpg": "/brand-carpentry/static/media/pergola-before-mobile.5c81961f11467789292f.jpg",
+    "static/media/shower-after-mobile.jpg": "/brand-carpentry/static/media/shower-after-mobile.1fd026b88e63b94c225c.jpg",
+    "static/media/pergola-after-mobile.jpg": "/brand-carpentry/static/media/pergola-after-mobile.459cf67d1dacffb7d595.jpg",
+    "static/media/bathroom-before-mobile.jpg": "/brand-carpentry/static/media/bathroom-before-mobile.8e70a5f060e92486413e.jpg",
+    "static/media/Mom-deck-mobile.jpg": "/brand-carpentry/static/media/Mom-deck-mobile.15828e9b4127131158bd.jpg",
+    "static/media/bathroom-after-mobile.jpg": "/brand-carpentry/static/media/bathroom-after-mobile.67f69db3a73e184c399b.jpg",
+    "static/media/jacked mobile.jpg": "/brand-carpentry/static/media/jacked mobile.bbd14f590a5615b865e1.jpg",
+    "static/media/ccLogo-white.png": "/brand-carpentry/static/media/ccLogo-white.c51a7a4559633b53872b.png",
+    "static/media/jacked 1.jpg": "/brand-carpentry/static/media/jacked 1.8d506a9618930a72cb1b.jpg",
+    "static/media/ccLogo.png": "/brand-carpentry/static/media/ccLogo.d2df58505199a5b7307b.png",
+    "static/media/slick.svg": "/brand-carpentry/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/brand-carpentry/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/brand-carpentry/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/brand-carpentry/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/brand-carpentry/index.html",
-    "static/media/close-icon.svg": "/brand-carpentry/static/media/close-icon.36a1df96f812b5f4c12f817f90a904c6.svg",
-    "static/media/menu-icon.svg": "/brand-carpentry/static/media/menu-icon.9cbfc3090b4b0aec575128df8ede3633.svg",
-    "main.97c5dcc5.css.map": "/brand-carpentry/static/css/main.97c5dcc5.css.map",
-    "main.fd8c1bbf.js.map": "/brand-carpentry/static/js/main.fd8c1bbf.js.map"
+    "main.b947bc09.css.map": "/brand-carpentry/static/css/main.b947bc09.css.map",
+    "main.8833ec22.js.map": "/brand-carpentry/static/js/main.8833ec22.js.map"
   },
   "entrypoints": [
-    "static/css/main.97c5dcc5.css",
-    "static/js/main.fd8c1bbf.js"
+    "static/css/main.b947bc09.css",
+    "static/js/main.8833ec22.js"
   ]
 }
