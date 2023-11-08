@@ -10,11 +10,11 @@ import {
 const Contact = () => {
   const isAboveMd = useMediaQuery("(min-width: 768px)")
   const isAboveSmallPhone = useMediaQuery(
-    "(min-height: 840px) and (min-width:360px)"
+    "(min-height: 700px) and (min-width:360px)"
   )
   return (
-    <section id="contact" className="pt-16 md:pt-24 h-screen">
-      <div className="h-full pt-8 md:pt-4 flex flex-col gap-4">
+    <section id="contact" className="pt-16 md:pt-24 h-[100svh]">
+      <div className="h-full pt-8 md:pt-4 pb-4 flex flex-col gap-4">
         <div className="border-2 border-gold rounded-xl p-3 bg-white flex flex-col flex-grow w-5/6 mx-auto h-full">
           {isAboveMd ? (
             <div className="my-auto">
@@ -32,7 +32,7 @@ const Contact = () => {
                         visible: { opacity: 1, x: 0 },
                       }}
                     >
-                      <p className="text-darker-blue text-center text-[2.5rem] font-bold font-heebo">
+                      <p className="text-darker-blue text-center text-[2rem] font-bold font-heebo">
                         Contact Us
                       </p>
                     </motion.div>
@@ -76,7 +76,7 @@ const Contact = () => {
                     visible: { opacity: 1, x: 0 },
                   }}
                 >
-                  <p className="text-darker-blue text-center text-[2.5rem] font-bold font-heebo">
+                  <p className="text-darker-blue text-center text-[2rem] font-bold font-heebo">
                     Contact Us
                   </p>
                 </motion.div>
@@ -84,12 +84,9 @@ const Contact = () => {
               <div className="">
                 {" "}
                 <p className="text-black text-justify font-heebo text-[1rem] lg:w-5/6 lg:mx-auto">
-                  We are always happy to help so hit us up day or night! Just
-                  kidding. We have lives too so please use common sense with the
-                  timing of your inquiries. We are in high demand and likely
-                  booked at least a few weeks in advance so don't delay if you
-                  are serious about getting a job done the right way. We look
-                  forward to hearing from you!
+                  We are in high demand and likely booked at least a few weeks
+                  in advance so don't delay if you are serious about getting a
+                  job done the right way. We look forward to hearing from you!
                 </p>
               </div>
               {isAboveSmallPhone ? (
@@ -112,13 +109,13 @@ const Contact = () => {
                 </p>
                 <div className="flex justify-center gap-2">
                   <a
-                    href="tel:+1234567890"
+                    href="tel:9415048392"
                     className="icon bg-cyberspace rounded-lg p-3"
                   >
                     <PhoneIcon className=" text-phone-green w-[2rem]" />
                   </a>
                   <a
-                    href="tel:+1234567890"
+                    href="tel:9415048392"
                     className="icon bg-cyberspace rounded-lg p-3"
                   >
                     <ChatBubbleOvalLeftEllipsisIcon className="text-white w-[2rem]" />
@@ -128,7 +125,7 @@ const Contact = () => {
             </div>
           )}
         </div>
-        <footer className="md:h-32 w-full bg-grayer">
+        {/* <footer className="md:h-32 w-full bg-grayer">
           <div className="w-10/12 m-auto">
             <div className="md:flex justify-center md:justify-between text-center">
               <p className="font-sarabun font-semibold text-2xl">
@@ -139,7 +136,7 @@ const Contact = () => {
               </p>
             </div>
           </div>
-        </footer>
+        </footer> */}
       </div>
     </section>
   )

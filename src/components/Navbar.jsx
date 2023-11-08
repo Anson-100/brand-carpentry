@@ -85,7 +85,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
               isMenuToggled ? "translate-x-0" : "translate-x-full"
             }`}
           >
-            <div className="flex flex-col font-heebo text-center text-[1.75rem] text-white gap-20 pt-16">
+            <div className="flex flex-col font-heebo text-center text-[1.75rem] text-white gap-10 pt-16">
               <Link
                 className="navlink"
                 page="Home"

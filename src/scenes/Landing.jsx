@@ -8,7 +8,7 @@ const Landing = ({ isTopOfPage, setSelectedPage }) => {
   const landingBorder = isTopOfPage ? "" : "border-opacity-0"
 
   return (
-    <section id="home" className="h-screen">
+    <section id="home" className="h-[100svh]">
       <div className="h-full flex flex-col">
         <div className="h-[77px] md:h-[97px]"></div>
         <div

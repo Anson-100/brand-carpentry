@@ -7,7 +7,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll"
 const About = ({ setSelectedPage }) => {
   const isAboveMd = useMediaQuery("(min-width: 768px)")
   return (
-    <section id="about" className="pt-20 md:pt-24 h-screen">
+    <section id="about" className="pt-20 md:pt-24 h-[100svh]">
       <div className="h-full py-4 flex">
         <div className="border-2 border-gold rounded-xl p-3 bg-white flex flex-col h-full w-full my-auto">
           {/* DESKTOP LAYOUT */}
@@ -73,7 +73,7 @@ const About = ({ setSelectedPage }) => {
                     visible: { opacity: 1, x: 0 },
                   }}
                 >
-                  <p className="text-darker-blue text-center text-[2.5rem] font-bold font-heebo">
+                  <p className="text-darker-blue text-center text-[2rem] font-bold font-heebo">
                     About
                   </p>
                 </motion.div>
@@ -84,7 +84,7 @@ const About = ({ setSelectedPage }) => {
                     className="rounded-lg border-2 m-auto border-gold"
                   />
                 </div>
-                <p className="text-[1rem] text-darker-blue font-heebo text-justify my-5 mx-auto">
+                <p className="text-[1rem] text-darker-blue font-heebo text-justify my-3 mx-auto">
                   Welcome to Cotter Construction. We service the
                   Bradenton/Sarasota area of central Florida but are willing to
                   travel a little further if the money is right. There is no
@@ -95,7 +95,7 @@ const About = ({ setSelectedPage }) => {
                   Contact Cotter Construction today!{" "}
                 </p>
               </div>
-              <div className="flex justify-center my-auto">
+              {/* <div className="flex justify-center my-auto">
                 <AnchorLink
                   onClick={() => setSelectedPage("contact")}
                   href="#contact"
@@ -103,7 +103,7 @@ const About = ({ setSelectedPage }) => {
                 >
                   contact us
                 </AnchorLink>
-              </div>
+              </div> */}
             </div>
           )}
         </div>

@@ -43,7 +43,7 @@ const Services = () => {
   }
 
   return (
-    <section id="services" className="pt-20 md:pt-24 h-screen">
+    <section id="services" className="pt-20 md:pt-24 h-[100svh]">
       <div className="h-full py-4">
         <div className="border-2 border-gold rounded-xl p-3 bg-white h-full flex flex-col">
           <div>
@@ -58,7 +58,7 @@ const Services = () => {
                 visible: { opacity: 1, x: 0 },
               }}
             >
-              <p className="text-darker-blue text-center text-[2rem] se:text-[2.5rem] font-bold font-heebo">
+              <p className="text-darker-blue text-center text-[2rem] se:text-[2rem] font-bold font-heebo">
                 Services
               </p>
               <p className="text-black text-center mb-6 font-heebo text-[1rem] se:text-[1.2rem]">
@@ -103,12 +103,12 @@ const Services = () => {
             <div className="skillbox grid grid-cols-2 grid-rows-4 sm:grid-cols-4 sm:grid-rows-2 flex-grow gap-4 text-black">
               <div
                 onClick={() => handleTouch("tile1")}
-                className={`skills-mobile ${
+                className={`skills-mobile left ${
                   tileStates["tile1"] ? "active" : ""
                 }`}
               >
                 <CubeIcon className="tile-icon-mobile" />
-                <p className="tile-name-mobile">decks/pergolas</p>
+                <p className="tile-name-mobile">Decks</p>
                 <p className="tile-info-mobile">
                   Expert installation of stylish decks and pergolas to enhance
                   your outdoor living space.
@@ -116,7 +116,7 @@ const Services = () => {
               </div>
               <div
                 onClick={() => handleTouch("tile2")}
-                className={`skills-mobile ${
+                className={`skills-mobile right ${
                   tileStates["tile2"] ? "active" : ""
                 }`}
               >
@@ -129,7 +129,7 @@ const Services = () => {
               </div>
               <div
                 onClick={() => handleTouch("tile3")}
-                className={`skills-mobile ${
+                className={`skills-mobile left ${
                   tileStates["tile3"] ? "active" : ""
                 }`}
               >

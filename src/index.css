@@ -142,13 +142,18 @@ body,
   z-index: 20;
 }
 
-.skills-mobile.active {
-  transform: scale(1.5);
+.skills-mobile.active.left {
+  transform: scale(1.8) translateX(20%);
+  z-index: 30;
+}
+
+.skills-mobile.active.right {
+  transform: scale(1.8) translateX(-20%);
   z-index: 30;
 }
 
 .tile-icon-mobile {
-  width: 3rem;
+  width: 2.5rem;
   transition: all;
   transition-duration: 300ms;
   position: absolute;
@@ -161,7 +166,7 @@ body,
 
 .tile-name-mobile {
   position: absolute;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-family: heebo;
   top: 55%;
   transition: all;
@@ -169,7 +174,9 @@ body,
 }
 
 .skills-mobile.active .tile-name-mobile {
-  top: 5%;
+  top: 2%;
+  font-size: 0.9rem;
+  border-bottom: 1px solid gray;
 }
 
 .tile-info-mobile {
@@ -180,11 +187,11 @@ body,
   top: 100%;
   transition: top 300ms, opacity 100ms;
   opacity: 0;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
 }
 
 .skills-mobile.active .tile-info-mobile {
-  top: 25%;
+  top: 28%;
   opacity: 1;
 }
 

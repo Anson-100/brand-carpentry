@@ -93,7 +93,7 @@ function App() {
           amount="all"
           onViewportEnter={() => setSelectedPage("gallery")}
         >
-          <Gallery />
+          <Gallery setSelectedPage={setSelectedPage} />
         </motion.div>
       </div>
       <LineGradient />
@@ -118,6 +118,7 @@ function App() {
           <Contact />
         </motion.div>
       </div>
+      <Footer />
     </div>
   )
 }
