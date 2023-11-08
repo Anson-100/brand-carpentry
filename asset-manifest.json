@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/brand-carpentry/static/css/main.baf4eb7b.css",
-    "main.js": "/brand-carpentry/static/js/main.05feb6d8.js",
+    "main.js": "/brand-carpentry/static/js/main.effb3b2b.js",
     "static/media/bg-image.png": "/brand-carpentry/static/media/bg-image.93fd46fd411eebcf1b79.png",
     "static/media/bathroom2-before-mobile.jpg": "/brand-carpentry/static/media/bathroom2-before-mobile.b80541824f9650622235.jpg",
     "static/media/bathroom2-after-mobile.jpg": "/brand-carpentry/static/media/bathroom2-after-mobile.a7bd66e5f6436f92c4b9.jpg",
@@ -25,10 +25,10 @@
     "static/media/slick.woff": "/brand-carpentry/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/brand-carpentry/index.html",
     "main.baf4eb7b.css.map": "/brand-carpentry/static/css/main.baf4eb7b.css.map",
-    "main.05feb6d8.js.map": "/brand-carpentry/static/js/main.05feb6d8.js.map"
+    "main.effb3b2b.js.map": "/brand-carpentry/static/js/main.effb3b2b.js.map"
   },
   "entrypoints": [
     "static/css/main.baf4eb7b.css",
-    "static/js/main.05feb6d8.js"
+    "static/js/main.effb3b2b.js"
   ]
 }
