@@ -22,11 +22,11 @@ const Landing = ({ isTopOfPage, setSelectedPage }) => {
               WE GET SHIT DONE.
             </p>
           </div>{" "}
-          <div>
+          <div className="">
             <AnchorLink
               onClick={() => setSelectedPage("contact")}
               href="#contact"
-              className={`${fadeClass2} font-sarabun text-[1.5rem] bg-opacity-20 hover:bg-opacity-30 text-grayish bg-white rounded-lg px-2 transition-all duration-200`}
+              className={` ${fadeClass2} cursor-pointer font-sarabun text-[1.5rem] text-white transition-all duration-300 bg-gold hover:underline rounded-lg px-2 pb-1 active:translate-y-[1px]`}
             >
               contact us
             </AnchorLink>

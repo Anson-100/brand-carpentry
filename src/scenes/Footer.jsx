@@ -2,7 +2,7 @@ import SocialMediaIcons from "../components/SocialMediaIcons"
 
 const Footer = () => {
   return (
-    <footer className="h-32 bg-grayer">
+    <footer className="h-32 mt-16 bg-grayer">
       <div className="w-10/12 m-auto">
         <SocialMediaIcons />
         <div className="md:flex justify-center md:justify-between text-center">

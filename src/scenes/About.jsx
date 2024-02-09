@@ -45,7 +45,7 @@ const About = ({ setSelectedPage }) => {
                   <AnchorLink
                     onClick={() => setSelectedPage("contact")}
                     href="#contact"
-                    className="cursor-pointer contact font-sarabun text-[1.5rem] text-white bg-light-blue hover:bg-darker-blue rounded-lg px-2 transition-all active:translate-y-[1px] duration-200"
+                    className="cursor-pointer contact font-sarabun text-[1.5rem] text-white bg-gold hover:underline rounded-lg px-2 pb-1 active:translate-y-[1px]"
                   >
                     contact us
                   </AnchorLink>

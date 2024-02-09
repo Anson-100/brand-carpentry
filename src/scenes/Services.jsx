@@ -7,7 +7,11 @@ import {
   VariableIcon,
 } from "@heroicons/react/24/outline"
 
-import { CubeIcon, PuzzlePieceIcon } from "@heroicons/react/24/solid"
+import {
+  CubeIcon,
+  PaintBrushIcon,
+  PuzzlePieceIcon,
+} from "@heroicons/react/24/solid"
 import { motion } from "framer-motion"
 
 const Services = () => {
@@ -72,6 +76,8 @@ const Services = () => {
               <div className="skills">
                 <CubeIcon className="tile-icon" />
                 <p className="tile-name">Decks/Pergolas</p>
+                <div className="divider"></div>
+
                 <p className="tile-info">
                   Expert installation of stylish decks and pergolas to enhance
                   your outdoor living space.
@@ -93,11 +99,46 @@ const Services = () => {
                   roofs to creaky floors.
                 </p>
               </div>
-              <div className="skills"></div>
-              <div className="skills"></div>
-              <div className="skills"></div>
-              <div className="skills"></div>
-              <div className="skills"></div>
+              <div className="skills">
+                <PaintBrushIcon className="tile-icon" />
+                <p className="tile-name">Painting</p>
+                <p className="tile-info">
+                  Expert interior and exterior painting services to refresh and
+                  revitalize your home or office..
+                </p>
+              </div>
+              <div className="skills">
+                <PuzzlePieceIcon className="tile-icon" />
+                <p className="tile-name">Home Repair</p>
+                <p className="tile-info">
+                  Comprehensive home repairs, tackling everything from leaky
+                  roofs to creaky floors.
+                </p>
+              </div>
+              <div className="skills">
+                <PuzzlePieceIcon className="tile-icon" />
+                <p className="tile-name">Home Repair</p>
+                <p className="tile-info">
+                  Comprehensive home repairs, tackling everything from leaky
+                  roofs to creaky floors.
+                </p>
+              </div>
+              <div className="skills">
+                <PuzzlePieceIcon className="tile-icon" />
+                <p className="tile-name">Home Repair</p>
+                <p className="tile-info">
+                  Comprehensive home repairs, tackling everything from leaky
+                  roofs to creaky floors.
+                </p>
+              </div>
+              <div className="skills">
+                <PuzzlePieceIcon className="tile-icon" />
+                <p className="tile-name">Home Repair</p>
+                <p className="tile-info">
+                  Comprehensive home repairs, tackling everything from leaky
+                  roofs to creaky floors.
+                </p>
+              </div>
             </div>
           ) : (
             <div className="skillbox grid grid-cols-2 grid-rows-4 sm:grid-cols-4 sm:grid-rows-2 flex-grow gap-4 text-black">
@@ -140,11 +181,71 @@ const Services = () => {
                   roofs to creaky floors.
                 </p>
               </div>
-              <div className="skills"></div>
-              <div className="skills"></div>
-              <div className="skills"></div>
-              <div className="skills"></div>
-              <div className="skills"></div>
+              <div
+                onClick={() => handleTouch("tile4")}
+                className={`skills-mobile right ${
+                  tileStates["tile4"] ? "active" : ""
+                }`}
+              >
+                <PaintBrushIcon className="tile-icon-mobile" />
+                <p className="tile-name-mobile">Painting</p>
+                <p className="tile-info-mobile">
+                  Expert interior and exterior painting services to refresh and
+                  revitalize your home or office.
+                </p>
+              </div>
+              <div
+                onClick={() => handleTouch("tile5")}
+                className={`skills-mobile left ${
+                  tileStates["tile5"] ? "active" : ""
+                }`}
+              >
+                <CubeIcon className="tile-icon-mobile" />
+                <p className="tile-name-mobile">Decks</p>
+                <p className="tile-info-mobile">
+                  Expert installation of stylish decks and pergolas to enhance
+                  your outdoor living space.
+                </p>
+              </div>
+              <div
+                onClick={() => handleTouch("tile6")}
+                className={`skills-mobile right ${
+                  tileStates["tile6"] ? "active" : ""
+                }`}
+              >
+                <SparklesIcon className="tile-icon-mobile" />
+                <p className="tile-name-mobile">Remodels</p>
+                <p className="tile-info-mobile">
+                  Transform your kitchen, bathroom, and more with our top-notch
+                  remodeling services.
+                </p>
+              </div>
+              <div
+                onClick={() => handleTouch("tile7")}
+                className={`skills-mobile left ${
+                  tileStates["tile7"] ? "active" : ""
+                }`}
+              >
+                <CubeIcon className="tile-icon-mobile" />
+                <p className="tile-name-mobile">Decks</p>
+                <p className="tile-info-mobile">
+                  Expert installation of stylish decks and pergolas to enhance
+                  your outdoor living space.
+                </p>
+              </div>
+              <div
+                onClick={() => handleTouch("tile8")}
+                className={`skills-mobile right ${
+                  tileStates["tile8"] ? "active" : ""
+                }`}
+              >
+                <SparklesIcon className="tile-icon-mobile" />
+                <p className="tile-name-mobile">Remodels</p>
+                <p className="tile-info-mobile">
+                  Transform your kitchen, bathroom, and more with our top-notch
+                  remodeling services.
+                </p>
+              </div>
             </div>
           )}
         </div>

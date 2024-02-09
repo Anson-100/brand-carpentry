@@ -32,7 +32,7 @@ const Contact = () => {
                         visible: { opacity: 1, x: 0 },
                       }}
                     >
-                      <p className="text-darker-blue text-center text-[2rem] font-bold font-heebo">
+                      <p className="text-darker-blue text-center text-[2rem] se:text-[2.5rem] font-bold font-heebo">
                         Contact Us
                       </p>
                     </motion.div>

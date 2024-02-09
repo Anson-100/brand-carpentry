@@ -24,12 +24,12 @@ body,
   @apply text-white;
 }
 
-/* NAVBAR---------------------------------------------------- */
+/* NAVBAR-------------------------------------------------------------------------------------------- */
 #NAVBAR {
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
 }
 
-/* LANDING--------------------------------------------------- */
+/* LANDING----------------------------------------------------------------------------------------------- */
 #LANDING {
   background-image: url("assets/bg-image.png");
   background-size: cover;
@@ -62,10 +62,6 @@ body,
 }
 
 /* TILE ANIMATION STYLING (desktop)*/
-/* .skillbox {
-  box-shadow: 2px 2px 4px gray;
-} */
-
 .skills {
   display: flex;
   flex-direction: column;
@@ -86,11 +82,11 @@ body,
 }
 
 .tile-icon {
-  width: 3rem;
+  width: 4rem;
   transition: all;
   transition-duration: 300ms;
   position: absolute;
-  top: 30%;
+  top: 28%;
 }
 
 .skills:hover .tile-icon {
@@ -99,15 +95,17 @@ body,
 
 .tile-name {
   position: absolute;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-family: heebo;
-  top: 55%;
+  top: 58%;
   transition: all;
   transition-duration: 300ms;
+  font-weight: bold;
 }
 
 .skills:hover .tile-name {
   top: 5%;
+  border-bottom: 2px solid #00a9ff;
 }
 
 .tile-info {
@@ -118,15 +116,15 @@ body,
   top: 100%;
   transition: top 300ms, opacity 100ms;
   opacity: 0;
+  font-size: 1.2rem;
 }
 
 .skills:hover .tile-info {
-  top: 20%;
+  top: 25%;
   opacity: 1;
 }
 
-/* TILE ANIMATION STYLING (mobile)*/
-
+/* TILE ANIMATION STYLING (mobile)----------------------------------------------------------------------------------------*/
 .skills-mobile {
   display: flex;
   flex-direction: column;
@@ -153,11 +151,17 @@ body,
 }
 
 .tile-icon-mobile {
-  width: 2.5rem;
+  width: 2rem;
   transition: all;
   transition-duration: 300ms;
   position: absolute;
   top: 20%;
+}
+
+@media (min-width: 400px) {
+  .tile-icon-mobile {
+    width: 2.5rem;
+  }
 }
 
 .skills-mobile.active .tile-icon-mobile {
@@ -176,7 +180,7 @@ body,
 .skills-mobile.active .tile-name-mobile {
   top: 2%;
   font-size: 0.9rem;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #00a9ff;
 }
 
 .tile-info-mobile {
@@ -195,18 +199,7 @@ body,
   opacity: 1;
 }
 
-/* CAROUSEL STYLING */
+/* CAROUSEL STYLING ---------------------------------------------------------------------------------------------*/
 .slides {
   transition: transform 0.3s ease-in-out;
-}
-
-.viewport-img {
-  max-width: full;
-  object-fit: cover;
-}
-
-@media screen and (min-width: 850px) {
-  .viewport-img {
-    max-width: 50%;
-  }
 }

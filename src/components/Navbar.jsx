@@ -10,8 +10,8 @@ const Link = ({ page, selectedPage, setSelectedPage, className }) => {
   return (
     <AnchorLink
       className={`${className} ${
-        selectedPage === lowerCasePage ? "text-light-blue" : ""
-      } hover:text-gold transition duration-300 inline-block`}
+        selectedPage === lowerCasePage ? "text-gold underline" : ""
+      } hover:underline inline-block`}
       href={`#${lowerCasePage}`}
       onClick={() => setSelectedPage(lowerCasePage)}
     >
@@ -78,7 +78,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
         )}
 
         {/* BURGER MENU */}
-        {!isDesktop && (
+        {!isDesktop && isMenuToggled && (
           <div
             id="nav-menu"
             className={`fixed right-0 top-[5rem] h-auto pb-[4rem] bg-black bg-opacity-90 rounded-bl-xl w-2/3 transform transition-transform duration-[400ms] ${

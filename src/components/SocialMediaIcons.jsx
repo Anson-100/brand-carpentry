@@ -4,7 +4,7 @@ import linkedIcon from "../assets/linkedin.png"
 
 const SocialMediaIcons = () => {
   return (
-    <div className="flex justify-center md:justify-start pt-4 my-10 gap-7">
+    <div className="flex justify-center md:justify-start pt-4 my-6 gap-7">
       {" "}
       <a
         className="hover:opacity-50 transition duration-500"
