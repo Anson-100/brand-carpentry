@@ -11,11 +11,24 @@ import {
   CubeIcon,
   PaintBrushIcon,
   PuzzlePieceIcon,
-} from "@heroicons/react/24/solid"
+} from "@heroicons/react/24/outline"
 import { motion } from "framer-motion"
 
+// IMAGE IMPORTS
+import Painting from "../assets/services-paint.png"
+import Window from "../assets/services-window.png"
+import Pergola from "../assets/services-pergola.png"
+import Concrete from "../assets/services-concrete.png"
+import Repair from "../assets/services-repair.png"
+import Remodel from "../assets/services-remodel.png"
+import Hedge from "../assets/services-hedge.png"
+import Tile from "../assets/services-tile.png"
+import Bathroom from "../assets/services-bathroom.png"
+import Kitchen from "../assets/services-kitchen.png"
+import Floor from "../assets/services-floor.png"
+
 const Services = () => {
-  const isDesktop = useMediaQuery("(min-width: 768px)")
+  const isDesktop = useMediaQuery("(min-width: 1024px)")
 
   const [tileStates, setTileStates] = useState({})
   const tileTimeouts = useRef({})
@@ -47,10 +60,10 @@ const Services = () => {
   }
 
   return (
-    <section id="services" className="pt-20 md:pt-24 h-[100svh]">
-      <div className="h-full py-4">
-        <div className="border-2 border-gold rounded-xl p-3 bg-white h-full flex flex-col">
-          <div>
+    <section id="services" className="h-[100svh] ">
+      <div className="h-full pt-20 pb-10">
+        <div className="h-full flex flex-col">
+          <div className="carousel py-4 bg-zinc-900 rounded-full m-auto mb-4 px-12">
             {" "}
             <motion.div
               initial="hidden"
@@ -62,189 +75,234 @@ const Services = () => {
                 visible: { opacity: 1, x: 0 },
               }}
             >
-              <p className="text-darker-blue text-center text-[2rem] se:text-[2rem] font-bold font-heebo">
+              <p className="text-shadow text-gray-100 text-center text-2xl md:text-2xl font-bold font-heebo ">
                 Services
               </p>
-              <p className="text-black text-center mb-6 font-heebo text-[1rem] se:text-[1.2rem]">
-                Check out some of the cool stuff we do! We are both licensed and
-                insured.
-              </p>
             </motion.div>
-          </div>
+          </div>{" "}
+          <p className="text-gray-600 text-center mb-4 se:hidden landscape-mobile:hidden">
+            Check out some of the cool stuff we do! We are both{" "}
+            <span className="text-gray-700">licensed and insured.</span>
+          </p>
           {isDesktop ? (
-            <div className="skillbox grid grid-cols-2 grid-rows-4 sm:grid-cols-4 sm:grid-rows-2 flex-grow gap-4 text-black">
-              <div className="skills">
-                <CubeIcon className="tile-icon" />
-                <p className="tile-name">Decks/Pergolas</p>
-                <div className="divider"></div>
+            // DESKTOP TILES==============================================================================
+            <div className="rounded-lg skillbox xl:py-8 px-8 grid grid-cols-2 grid-rows-4 sm:grid-cols-4 sm:grid-rows-2 flex-grow gap-8 text-gray-100 xl:w-5/6 xl:m-auto">
+              <div
+                className="skills bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: `url(${Pergola})` }}
+              >
+                <div className="tile-name backdrop-blur-md">
+                  {" "}
+                  <p>Decks/Pergolas</p>
+                  <div className="h-[1px] w-full mb-2 bg-gray-400"></div>
+                  <p className="tile-info">Enhance your outdoor living space</p>
+                </div>
+              </div>
+              <div
+                className="skills bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: `url(${Bathroom})` }}
+              >
+                <div className="tile-name backdrop-blur-md">
+                  <p>Bathrooms</p>
+                  <div className="h-[1px] w-full mb-2 bg-gray-400"></div>
+                  <p className="tile-info">
+                    Expert installation of vanity, showers, and more
+                  </p>
+                </div>
+              </div>
 
-                <p className="tile-info">
-                  Expert installation of stylish decks and pergolas to enhance
-                  your outdoor living space.
-                </p>
+              <div
+                className="skills bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: `url(${Kitchen})` }}
+              >
+                <div className="tile-name backdrop-blur-md">
+                  <p>Kitchens</p>
+                  <div className="h-[1px] w-full mb-2 bg-gray-400"></div>
+                  <p className="tile-info">Comprehensive home repairs</p>
+                </div>
               </div>
-              <div className="skills">
-                <SparklesIcon className="tile-icon" />
-                <p className="tile-name">Remodels</p>
-                <p className="tile-info">
-                  Transform your kitchen, bathroom, and more with our top-notch
-                  remodeling services.
-                </p>
+
+              <div
+                className="skills bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: `url(${Painting})` }}
+              >
+                <div className="tile-name backdrop-blur-md">
+                  <p>Painting</p>
+                  <div className="h-[1px] w-full mb-2 bg-gray-400"></div>
+                  <p className="tile-info">
+                    Expert interior and exterior painting services
+                  </p>
+                </div>
               </div>
-              <div className="skills">
-                <PuzzlePieceIcon className="tile-icon" />
-                <p className="tile-name">Home Repair</p>
-                <p className="tile-info">
-                  Comprehensive home repairs, tackling everything from leaky
-                  roofs to creaky floors.
-                </p>
+
+              <div
+                className="skills bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: `url(${Tile})` }}
+              >
+                <div className="tile-name backdrop-blur-md">
+                  <p>Tile</p>
+                  <div className="h-[1px] w-full mb-2 bg-gray-400"></div>
+                  <p className="tile-info">
+                    Backsplashes, floors, showers, and more!
+                  </p>
+                </div>
               </div>
-              <div className="skills">
-                <PaintBrushIcon className="tile-icon" />
-                <p className="tile-name">Painting</p>
-                <p className="tile-info">
-                  Expert interior and exterior painting services to refresh and
-                  revitalize your home or office..
-                </p>
+
+              <div
+                className="skills bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: `url(${Window})` }}
+              >
+                <div className="tile-name backdrop-blur-md">
+                  <p>Window Replacement</p>
+                  <div className="h-[1px] w-full mb-2 bg-gray-400"></div>
+                  <p className="tile-info">
+                    See the world clearly and lower your utility bill!
+                  </p>
+                </div>
               </div>
-              <div className="skills">
-                <PuzzlePieceIcon className="tile-icon" />
-                <p className="tile-name">Home Repair</p>
-                <p className="tile-info">
-                  Comprehensive home repairs, tackling everything from leaky
-                  roofs to creaky floors.
-                </p>
+
+              <div
+                className="skills bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: `url(${Floor})` }}
+              >
+                <div className="tile-name backdrop-blur-md">
+                  <p>Floor Installation</p>
+                  <div className="h-[1px] w-full mb-2 bg-gray-400"></div>
+                  <p className="tile-info">
+                    Floating floors, tile floors, hardwood, etc.{" "}
+                  </p>
+                </div>
               </div>
-              <div className="skills">
-                <PuzzlePieceIcon className="tile-icon" />
-                <p className="tile-name">Home Repair</p>
-                <p className="tile-info">
-                  Comprehensive home repairs, tackling everything from leaky
-                  roofs to creaky floors.
-                </p>
-              </div>
-              <div className="skills">
-                <PuzzlePieceIcon className="tile-icon" />
-                <p className="tile-name">Home Repair</p>
-                <p className="tile-info">
-                  Comprehensive home repairs, tackling everything from leaky
-                  roofs to creaky floors.
-                </p>
-              </div>
-              <div className="skills">
-                <PuzzlePieceIcon className="tile-icon" />
-                <p className="tile-name">Home Repair</p>
-                <p className="tile-info">
-                  Comprehensive home repairs, tackling everything from leaky
-                  roofs to creaky floors.
-                </p>
+
+              <div
+                className="skills bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: `url(${Remodel})` }}
+              >
+                <div className="tile-name backdrop-blur-md">
+                  <p>Remodels</p>
+                  <div className="h-[1px] w-full mb-2 bg-gray-400"></div>
+                  <p className="tile-info">Update your living space</p>
+                </div>
               </div>
             </div>
           ) : (
-            <div className="skillbox grid grid-cols-2 grid-rows-4 sm:grid-cols-4 sm:grid-rows-2 flex-grow gap-4 text-black">
+            // MOBILE TILES=====================================================
+            <div className="skillbox grid grid-cols-2 grid-rows-4 sm:grid-cols-4 sm:grid-rows-2 flex-grow gap-4 landscape-mobile:gap-1 text-gray-100">
               <div
+                style={{ backgroundImage: `url(${Pergola})` }}
                 onClick={() => handleTouch("tile1")}
                 className={`skills-mobile left ${
                   tileStates["tile1"] ? "active" : ""
                 }`}
               >
-                <CubeIcon className="tile-icon-mobile" />
-                <p className="tile-name-mobile">Decks</p>
-                <p className="tile-info-mobile">
-                  Expert installation of stylish decks and pergolas to enhance
-                  your outdoor living space.
-                </p>
+                <div className="tile-name-mobile backdrop-blur-md">
+                  <p>Decks/Pergolas</p>
+                  <div className="h-[1px] w-full mb-2 bg-gray-400"></div>
+                  <p className="tile-info-mobile">
+                    Enhance your outdoor living space
+                  </p>
+                </div>
               </div>
               <div
+                style={{ backgroundImage: `url(${Bathroom})` }}
                 onClick={() => handleTouch("tile2")}
                 className={`skills-mobile right ${
                   tileStates["tile2"] ? "active" : ""
                 }`}
               >
-                <SparklesIcon className="tile-icon-mobile" />
-                <p className="tile-name-mobile">Remodels</p>
-                <p className="tile-info-mobile">
-                  Transform your kitchen, bathroom, and more with our top-notch
-                  remodeling services.
-                </p>
+                <div className="tile-name-mobile backdrop-blur-md">
+                  <p>Bathrooms</p>
+                  <div className="h-[1px] w-full mb-2 bg-gray-400"></div>
+                  <p className="tile-info-mobile">
+                    Expert installation of vanity, showers, and more
+                  </p>
+                </div>
               </div>
               <div
+                style={{ backgroundImage: `url(${Kitchen})` }}
                 onClick={() => handleTouch("tile3")}
                 className={`skills-mobile left ${
                   tileStates["tile3"] ? "active" : ""
                 }`}
               >
-                <PuzzlePieceIcon className="tile-icon-mobile" />
-                <p className="tile-name-mobile">Home Repair</p>
-                <p className="tile-info-mobile">
-                  Comprehensive home repairs, tackling everything from leaky
-                  roofs to creaky floors.
-                </p>
+                <div className="tile-name-mobile backdrop-blur-md">
+                  <p>Kitchens</p>
+                  <div className="h-[1px] w-full mb-2 bg-gray-400"></div>
+                  <p className="tile-info-mobile">Update your kitchen </p>
+                </div>
               </div>
               <div
+                style={{ backgroundImage: `url(${Painting})` }}
                 onClick={() => handleTouch("tile4")}
                 className={`skills-mobile right ${
                   tileStates["tile4"] ? "active" : ""
                 }`}
               >
-                <PaintBrushIcon className="tile-icon-mobile" />
-                <p className="tile-name-mobile">Painting</p>
-                <p className="tile-info-mobile">
-                  Expert interior and exterior painting services to refresh and
-                  revitalize your home or office.
-                </p>
+                <div className="tile-name-mobile backdrop-blur-md">
+                  <p>Painting</p>
+                  <div className="h-[1px] w-full mb-2 bg-gray-400"></div>
+                  <p className="tile-info-mobile">
+                    Expert interior and exterior painting services
+                  </p>
+                </div>
               </div>
               <div
+                style={{ backgroundImage: `url(${Tile})` }}
                 onClick={() => handleTouch("tile5")}
                 className={`skills-mobile left ${
                   tileStates["tile5"] ? "active" : ""
                 }`}
               >
-                <CubeIcon className="tile-icon-mobile" />
-                <p className="tile-name-mobile">Decks</p>
-                <p className="tile-info-mobile">
-                  Expert installation of stylish decks and pergolas to enhance
-                  your outdoor living space.
-                </p>
+                <div className="tile-name-mobile backdrop-blur-md">
+                  <p>Tile</p>
+                  <div className="h-[1px] w-full mb-2 bg-gray-400"></div>
+                  <p className="tile-info-mobile">
+                    Backsplashes, floors, showers, and more!
+                  </p>
+                </div>
               </div>
               <div
+                style={{ backgroundImage: `url(${Window})` }}
                 onClick={() => handleTouch("tile6")}
                 className={`skills-mobile right ${
                   tileStates["tile6"] ? "active" : ""
                 }`}
               >
-                <SparklesIcon className="tile-icon-mobile" />
-                <p className="tile-name-mobile">Remodels</p>
-                <p className="tile-info-mobile">
-                  Transform your kitchen, bathroom, and more with our top-notch
-                  remodeling services.
-                </p>
+                <div className="tile-name-mobile backdrop-blur-md">
+                  <p>Windows</p>
+                  <div className="h-[1px] w-full mb-2 bg-gray-400"></div>
+                  <p className="tile-info-mobile">
+                    See the world clearly and lower your utility bill!
+                  </p>
+                </div>
               </div>
               <div
+                style={{ backgroundImage: `url(${Floor})` }}
                 onClick={() => handleTouch("tile7")}
                 className={`skills-mobile left ${
                   tileStates["tile7"] ? "active" : ""
                 }`}
               >
-                <CubeIcon className="tile-icon-mobile" />
-                <p className="tile-name-mobile">Decks</p>
-                <p className="tile-info-mobile">
-                  Expert installation of stylish decks and pergolas to enhance
-                  your outdoor living space.
-                </p>
+                <div className="tile-name-mobile backdrop-blur-md">
+                  <p>Floor Installation</p>
+                  <div className="h-[1px] w-full mb-2 bg-gray-400"></div>
+                  <p className="tile-info-mobile">
+                    Floating floors, tile floors, hardwood, etc.
+                  </p>
+                </div>
               </div>
               <div
+                style={{ backgroundImage: `url(${Remodel})` }}
                 onClick={() => handleTouch("tile8")}
                 className={`skills-mobile right ${
                   tileStates["tile8"] ? "active" : ""
                 }`}
               >
-                <SparklesIcon className="tile-icon-mobile" />
-                <p className="tile-name-mobile">Remodels</p>
-                <p className="tile-info-mobile">
-                  Transform your kitchen, bathroom, and more with our top-notch
-                  remodeling services.
-                </p>
+                <div className="tile-name-mobile backdrop-blur-md">
+                  <p>Remodels</p>
+                  <div className="h-[1px] w-full mb-2 bg-gray-400"></div>
+                  <p className="tile-info-mobile">Update your living space</p>
+                </div>
               </div>
             </div>
           )}

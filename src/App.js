@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
-import Navbar from "./components/Navbar"
+import Navbar from "./scenes/Navbar"
 import Landing from "./scenes/Landing"
 import Services from "./scenes/Services"
 import About from "./scenes/About"
@@ -87,7 +87,7 @@ function App() {
       </div>
       <LineGradient />
 
-      <div className="h-full w-5/6 m-auto">
+      <div className="h-full">
         <motion.div
           margin="0 0 -200px 0"
           amount="all"
@@ -98,7 +98,7 @@ function App() {
       </div>
       <LineGradient />
 
-      <div className="h-full w-5/6 m-auto">
+      <div className="h-full m-auto">
         <motion.div
           margin="0 0 -200px 0"
           amount="all"
@@ -108,8 +108,7 @@ function App() {
         </motion.div>
       </div>
       <LineGradient />
-
-      <div className="h-full">
+      <div className="h-full m-auto w-5/6">
         <motion.div
           margin="0 0 -200px 0"
           amount="all"
@@ -118,7 +117,7 @@ function App() {
           <Contact />
         </motion.div>
       </div>
-      <Footer />
+      <Footer setSelectedPage={setSelectedPage} />
     </div>
   )
 }

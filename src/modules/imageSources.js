@@ -17,28 +17,29 @@ import showerFourBefore from "../assets/shower-4-before.jpg"
 import showerFourAfter from "../assets/shower-4-after.jpg"
 
 const imageSources = [
-  {
-    src: bathroomOneBefore,
-    alt: "Bathroom Before Renovation",
-    caption: "Before",
-  },
-  {
-    src: bathroomOneAfter,
-    alt: "Bathroom After Renovation",
-    caption: "After",
-  },
-  { src: cabinetBefore, alt: "Cabinet Before Renovation", caption: "Before" },
-  { src: cabinetAfter, alt: "Cabinet After Renovation", caption: "After" },
-  { src: camperBefore, alt: "Camper Before Renovation", caption: "Before" },
-  { src: camperAfter, alt: "Camper After Renovation", caption: "After" },
+  { src: rampBefore, alt: "Ramp Before Renovation", caption: "Before" },
+  { src: rampAfter, alt: "Ramp After Renovation", caption: "After" },
   {
     src: pergolaBefore,
     alt: "Pergola Before Renovation",
     caption: "Before",
   },
   { src: pergolaAfter, alt: "Pergola After Renovation", caption: "After" },
-  { src: rampBefore, alt: "Ramp Before Renovation", caption: "Before" },
-  { src: rampAfter, alt: "Ramp After Renovation", caption: "After" },
+  // {
+  //   src: bathroomOneBefore,
+  //   alt: "Bathroom Before Renovation",
+  //   caption: "Before",
+  // },
+  // {
+  //   src: bathroomOneAfter,
+  //   alt: "Bathroom After Renovation",
+  //   caption: "After",
+  // },
+  { src: cabinetBefore, alt: "Cabinet Before Renovation", caption: "Before" },
+  { src: cabinetAfter, alt: "Cabinet After Renovation", caption: "After" },
+  { src: camperBefore, alt: "Camper Before Renovation", caption: "Before" },
+  { src: camperAfter, alt: "Camper After Renovation", caption: "After" },
+
   {
     src: showerTwoBefore,
     alt: "Shower Before Renovation",
