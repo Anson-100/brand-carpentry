@@ -27,80 +27,11 @@ body,
   box-shadow: 0px 0px 3px gray, 0px 0px 4px gray;
 }
 
-/* .text-shadow {
-  text-shadow: 2px 2px 1px black, 0px 0px 1px rgb(0, 0, 0),
-    0px 0px 4px rgb(0, 0, 0);
-} */
-
-/* BUTTON IMPORT STYLING */
-.shadow-1 {
-  box-shadow: 3px 3px 1px black;
-}
-
-.shadow-1:active {
-  box-shadow: 2px 2px 1px black;
-}
-
-.shadow-2 {
-  box-shadow: inset 0px 0px 4px black;
-}
-
-.shadow-3 {
-  box-shadow: 3px 3px 1px black, inset 0px 0px 4px black;
-}
-
-.shadow-3:active {
-  box-shadow: 2px 2px 1px black, inset 0px 0px 4px black;
-}
-
-.shadow-4 {
-  box-shadow: 1px 1px 4px black;
-}
-
-.logo-shadow {
-  text-shadow: 4px 4px 1px black;
-}
-
-.svg-shadow {
-  filter: drop-shadow(4px 4px 1px black);
-}
-
 .logo-shadow-2 {
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.8),
     /* Outer glow */ 0 0 10px rgba(255, 0, 0, 0.6),
     /* Red glow */ 0 0 12px rgba(0, 255, 0, 0.6),
     /* Green glow */ 0 0 14px rgba(0, 0, 255, 0.6); /* Blue glow */
-}
-
-.logo-shadow-3 {
-  /* Define the gradient as background */
-  background: linear-gradient(180deg, #24cbff 14.53%, #fc59ff, #ffbd0c);
-
-  /* Make the text transparent to show the background */
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-
-  /* Fallback for browsers that do not support background-clip: text; */
-  display: inline-block;
-}
-
-.button-4 {
-  box-shadow: inset 0px 0px 4px black, 0px 0px 2px black;
-  transition: all;
-  transition-duration: 50ms;
-}
-
-.button-4:hover {
-  transform: translate(-1px, -1px);
-  box-shadow: 1px 1px 3px black, 1px 1px 2px black;
-}
-
-.button-4:active {
-  transform: translate(0.5px, 0.5px);
-  box-shadow: inset 0px 0px 4px black;
-  transition: all;
-  transition-duration: 0ms;
 }
 
 .the-one {
@@ -152,7 +83,7 @@ body,
   box-shadow: 2px 2px 4px gray;
 }
 
-/* ABOUT--------------------------------------------------------------------------------- */
+/* ABOUT BG IMAGE--------------------------------------------------------------------------------- */
 .about-bg {
   background-image: url("./assets/overhead mobile.jpg");
   background-size: cover;
@@ -161,7 +92,7 @@ body,
 
 @media (max-width: 1440px) {
   .about-bg {
-    background-size: 120%; /* Increase to zoom in */
+    background-size: 130%; /* Increase to zoom in */
     background-position: center;
   }
 }
@@ -265,8 +196,7 @@ body,
 }
 
 @media (max-height: 440px) and (orientation: landscape) {
-  .skills-mobile.active.left {
-    transform: scale(1.8) translateX(20%);
+  .skills-mobile {
     z-index: 30;
   }
 }

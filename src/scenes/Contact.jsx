@@ -49,7 +49,7 @@ const Contact = () => {
             >
               {/* HEADER============================================================================= */}
               <div className="flex flex-col gap-4 w-full">
-                <div className="py-4 bg-zinc-950 rounded-full mb-4 px-12 max-w-max mx-auto lg:mx-0 carousel">
+                <div className="py-4 bg-zinc-950 rounded-full mb-4 px-12 max-w-max mx-auto lg:mx-0 ">
                   <motion.div
                     initial="hidden"
                     whileInView="visible"
@@ -60,7 +60,7 @@ const Contact = () => {
                       visible: { opacity: 1, x: 0 },
                     }}
                   >
-                    <p className="text-shadow text-gray-100 text-2xl font-bold font-heebo ">
+                    <p className=" text-gray-100 text-xl md:text-2xl font-bold font-heebo landscape-mobile:text-xl">
                       Contact Us
                     </p>
                   </motion.div>
@@ -69,8 +69,7 @@ const Contact = () => {
                   <p className="text-zinc-700 w-2/3 mx-auto lg:mx-0 font-heebo">
                     You are welcome to reach out to us via call, text, or by
                     sending us a message (response time is usually quicker with
-                    call/text). We are grateful for the opportunity to help with
-                    your project and look forward to hearing from you!
+                    call/text). We look forward to hearing from you!
                   </p>
                 ) : (
                   ""
@@ -91,8 +90,10 @@ const Contact = () => {
                 }}
                 className="se:mt-0 xs:mt-4 md:mt-0 bg-zinc-800 rounded-lg p-4 carousel flex justify-between items-center"
               >
-                <p className="text-xl font-bold font-heebo">Call or Text</p>
-                <p className="text-lg font-heebo">
+                <p className="text-lg font-bold font-heebo landscape-mobile:text-lg">
+                  Call or Text
+                </p>
+                <p className="text-lg font-heebo landscape-mobile:text-base">
                   {isMobile ? (
                     <a
                       href="tel:9415048392"
@@ -119,14 +120,14 @@ const Contact = () => {
               >
                 {isLandscapeMobile ? (
                   <div className="flex justify-between items-center">
-                    <p className="text-xl font-bold font-heebo ">Email</p>
-                    <p className="font-heebo">
+                    <p className="text-lg font-bold font-heebo">Email</p>
+                    <p className="font-heebo text-base">
                       rotate your phone to write an email
                     </p>
                   </div>
                 ) : (
                   <div>
-                    <p className="text-xl font-bold font-heebo mb-4">Email</p>
+                    <p className="text-lg font-bold font-heebo mb-4">Email</p>
                     <form
                       target="_blank"
                       onSubmit={onSubmit}
@@ -187,7 +188,7 @@ const Contact = () => {
                         </p>
                       )}
                       <button
-                        className="sunset-glow text-gray-900 bg-zinc-50 rounded-full py-3 px-8 text-lg font-heebo shadow-4 hover:text-gray-50 hover:bg-gradient-sunset mt-4"
+                        className="sunset-glow text-gray-900 bg-zinc-50 rounded-full py-3 px-12 text-base font-heebo shadow-4 hover:text-gray-50 hover:bg-gradient-sunset mt-4 w-full sm:w-auto"
                         type="submit"
                       >
                         Send Us A Message!

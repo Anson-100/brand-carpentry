@@ -43,7 +43,7 @@ const About = ({ setSelectedPage }) => {
     <section id="about" className="h-[100svh]">
       <div className="h-full pt-20">
         <div className="h-full flex flex-col ss:pb-8">
-          <div className="carousel py-4 bg-zinc-900 rounded-full m-auto mb-4 lg:mb-6 px-12">
+          <div className=" py-4 bg-zinc-900 rounded-full m-auto mb-4 lg:mb-6 px-12">
             {" "}
             <motion.div
               initial="hidden"
@@ -55,7 +55,7 @@ const About = ({ setSelectedPage }) => {
                 visible: { opacity: 1, x: 0 },
               }}
             >
-              <p className="text-shadow text-gray-100 text-center text-2xl md:text-2xl font-bold font-heebo ">
+              <p className=" text-gray-100 text-center text-xl md:text-2xl font-bold font-heebo landscape-mobile:text-xl">
                 About Us
               </p>
             </motion.div>
@@ -122,14 +122,14 @@ const About = ({ setSelectedPage }) => {
                           }}
                         >
                           {" "}
-                          <p className=" text-zinc-950 text-2xl pt-4">
+                          <p className=" text-zinc-950 text-2xl landscape-mobile:text-xl pt-4">
                             Welcome to {""}
                             <span className=" font-montserrat font-bold">
                               Cotter Carpentry
                             </span>
                           </p>
                           {isLandscapeMobile ? (
-                            <p className=" text-zinc-800 text-lg">
+                            <p className=" text-zinc-800 text-base">
                               Welcome to Cotter Carpentry, proudly serving the
                               Bradenton/Sarasota region of Central Florida.
                               Trust in Cotter Carpentry—where excellence is
@@ -158,7 +158,7 @@ const About = ({ setSelectedPage }) => {
                     </AnimatePresence>{" "}
                     <button
                       onClick={() => toggleOpen("faq1")}
-                      className="flex flex-col items-center justify-center w-full text-left py-2 bg-bg-gray rounded-b-xl "
+                      className="flex flex-col items-center justify-center w-full text-left py-2 bg-bg-gray rounded-b-xl border-t border-zinc-400"
                     >
                       <div className="h-1 w-6 rounded-full bg-zinc-600 m-2"></div>
                     </button>

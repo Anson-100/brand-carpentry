@@ -11,6 +11,7 @@ import {
   UserCircleIcon,
   PaperAirplaneIcon,
 } from "@heroicons/react/24/outline"
+import facebookIcon from "../assets/facebook.png"
 
 const Link = ({ page, selectedPage, setSelectedPage, className }) => {
   const lowerCasePage = page.toLowerCase()
@@ -45,7 +46,7 @@ const LinkMobile = ({
     <AnchorLink
       className={`${
         selectedPage === lowerCasePage ? "text-gray-100" : "text-gray-400"
-      } py-2 px-4 flex items-center gap-2 hover:bg-gray4`} // Add flex and gap for icon alignment
+      } py-2 px-4 flex items-center gap-2 hover:bg-gray4 se-mobile:text-sm landscape-mobile:text-base`} // Add flex and gap for icon alignment
       href={`#${lowerCasePage}`}
       onClick={() => {
         setSelectedPage(lowerCasePage)
@@ -69,36 +70,40 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   return (
     <nav id="NAVBAR" className={`${navbarBackground} z-40 fixed top-0 w-full`}>
       <div className="flex items-center justify-between mx-auto w-5/6 py-2 ">
-        <p className="font-montserrat text-2xl">Cotter Carpentry</p>
+        <p className="font-montserrat text-xl md:text-2xl">Cotter Carpentry</p>
         {/* <img src={logo} alt="CC Logo" className="md:h-[65px] h-[48px]" /> */}
         {/* DESKTOP NAVBAR */}
         {isDesktop ? (
-          <div className="font-montserrat text-md flex gap-2">
-            <Link
-              page="Home"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            <Link
-              page="Services"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            <Link
-              page="Gallery"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
-            <Link
-              page="About"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />{" "}
-            <Link
-              page="Contact"
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
-            />
+          <div className="flex items-center gap-12">
+            <div className="font-montserrat text-md flex gap-2">
+              <Link
+                page="Home"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
+              <Link
+                page="Services"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
+              <Link
+                page="Gallery"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
+              <Link
+                page="About"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />{" "}
+              <Link
+                page="Contact"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
+            </div>
+            {/* <div className="h-6 w-[1px] bg-zinc-200 mr-4"></div> */}
+            {/* <img src={facebookIcon} alt="" /> */}
           </div>
         ) : (
           <button
@@ -112,13 +117,13 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
               <Bars3Icon
                 className={`${
                   isTopOfPage ? "text-zinc-900" : "text-zinc-900"
-                } w-[1.75rem]`}
+                } w-[1.5rem]`}
               />
             ) : (
               <XMarkIcon
                 className={`${
                   isTopOfPage ? "text-zinc-900" : "text-zinc-900"
-                } w-[1.75rem]`}
+                } w-[1.5rem]`}
               />
             )}
           </button>
@@ -128,12 +133,12 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
         {!isDesktop && isMenuToggled && (
           <div
             id="nav-menu"
-            className={`fixed right-2 top-14 h-auto bg-zinc-950 rounded-lg w-3/4 transform transition-transform duration-[400ms] ${
+            className={`fixed right-2  top-14 h-auto bg-zinc-950 rounded-lg w-[300px] sm:w-[400px] landscape-mobile:w-auto transform transition-transform duration-[400ms] ${
               isMenuToggled ? "translate-x-0" : "translate-x-full"
             }`}
           >
             {/* <div className="h-4 bg-gray-300 rounded-t-lg"></div> */}
-            <div className="flex flex-col font-heebo text-center text-xl text-white gap-8 py-8 landscape-mobile:gap-2 landscape-mobile:py-3">
+            <div className="flex flex-col font-heebo text-center se:text-base text-lg text-white gap-8 py-8 landscape-mobile:gap-4 se-mobile:gap-2 landscape-mobile:py-4 landscape-mobile:flex-row landscape-mobile:px-2">
               <LinkMobile
                 className="navlink"
                 page="Home"
@@ -142,7 +147,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
                 Icon={HomeIcon}
                 toggleMenu={() => setIsMenuToggled(false)}
               />
-              <div className="w-full h-[1px] bg-gray-700 m-auto" />
+              <div className="w-full h-[1px] bg-gray-700 m-auto landscape-mobile:hidden" />
               <LinkMobile
                 className="navlink"
                 page="Services"
@@ -151,7 +156,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
                 Icon={WrenchScrewdriverIcon}
                 toggleMenu={() => setIsMenuToggled(false)}
               />
-              <div className="w-full h-[1px] bg-gray-700 m-auto" />
+              <div className="w-full h-[1px] bg-gray-700 m-auto landscape-mobile:hidden" />
               <LinkMobile
                 className="navlink"
                 page="Gallery"
@@ -160,7 +165,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
                 Icon={PhotoIcon}
                 toggleMenu={() => setIsMenuToggled(false)}
               />
-              <div className="w-full h-[1px] bg-gray-700 m-auto" />
+              <div className="w-full h-[1px] bg-gray-700 m-auto landscape-mobile:hidden" />
               <LinkMobile
                 className="navlink"
                 page="About"
@@ -169,7 +174,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
                 Icon={UserCircleIcon}
                 toggleMenu={() => setIsMenuToggled(false)}
               />{" "}
-              <div className="w-full h-[1px] bg-gray-700 m-auto" />
+              <div className="w-full h-[1px] bg-gray-700 m-auto landscape-mobile:hidden" />
               <LinkMobile
                 className="navlink"
                 page="Contact"
